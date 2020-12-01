@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .a {
+                 width: 150px;
+                 height: 150px;
+                 border-radius: 300px;
+                 transition: transform .7s;
+             }
+    .a:hover{
+               -ms-transform: scale(1.5);
+     -webkit-transform: scale(1.5); 
+     transform: scale(1.5);
+             }
+</style>
+<body style="background-image: url(https://i.pinimg.com/originals/d7/90/c4/d790c46576198788692132af7df9ec48.jpg);">
+    <h1 style="text-align: center;">The Game Of Rock Paper And Scissors!</h1>
+    <small style="text-align: center; margin-left: 600px;">Click Below On Your Choice To Start</small>
+    <img class="a" id="4" src=""  style=" margin-left: 660px; border-radius: 1000px; height: 100px; width: 100px;"alt="">
+    <h1 style="text-align: center;" id="1"></h1>
+
+    <h3 style="text-align: center;" id="2"></h3>
+    <button onclick="rock()" style=" margin-left: 250px ;background-image: url(https://s.pngkit.com/png/small/68-680575_stone-clipart-big-rock-rock-clipart.png); width: 300px; height: 217px; background-repeat: no-repeat; text-align: center;"></button>
+    <button onclick="scissors()" style="margin-left: 20px;background-image: url(https://www.clker.com/cliparts/3/3/6/6/11949849891750717131sakset1.svg); width: 300px; height: 217px; background-repeat: no-repeat; text-align: center;"></button>
+    <button onclick="paper()" style="margin-left: 20px ;background-image: url(https://p7.hiclipart.com/preview/65/171/713/notebook-paper-drawing-clip-art-small-notepad-cliparts-thumbnail.jpg); width: 300px; height: 217px; background-repeat: no-repeat; text-align: center;"></button>
+    <br>
+    <button style="width: 70px;height: 50px; margin-left: 700px ;background-color: aqua; color: white; margin-top: 100px;"  onclick="location.reload();">Reset</button>
+  
+    <script>
+        let points = 0
+        let img = document.getElementById('4')
+        function rock(){
+        let com = Math.floor(Math.random()*3)
+        let ans = document.getElementById('1')
+        let score = document.getElementById('2')
+      
+    
+        if (com==0){
+ans.innerHTML='It is a tie! The computer choose rock'
+score.innerHTML='Score - '+points
+img.src='https://s.pngkit.com/png/small/68-680575_stone-clipart-big-rock-rock-clipart.png'
+        }
+        if (com==1){
+            ans.innerHTML='You Lost! The computer choose Paper'
+            points = points-1
+score.innerHTML='Score - '+points
+img.src='https://p7.hiclipart.com/preview/65/171/713/notebook-paper-drawing-clip-art-small-notepad-cliparts-thumbnail.jpg'
+        }
+        if (com==2){
+            ans.innerHTML='You Win! The computer choose Scissors'
+            points = points+1
+score.innerHTML='Score - '+points
+img.src='https://i.pinimg.com/originals/7b/1b/ec/7b1beccf6377ee380dff36bda96ff5aa.jpg'
+        }
+    }
+        function paper(){
+        let com = Math.floor(Math.random()*3)
+        let ans = document.getElementById('1')
+        let score = document.getElementById('2')
+   
+      
+        if (com==0){
+ans.innerHTML='You Win! The computer choose rock'
+img.src='https://s.pngkit.com/png/small/68-680575_stone-clipart-big-rock-rock-clipart.png'
+points = points+1
+score.innerHTML='Score - '+points
+
+        }
+        if (com==1){
+            ans.innerHTML='It is a tie! The computer choose Paper'
+
+            img.src='https://p7.hiclipart.com/preview/65/171/713/notebook-paper-drawing-clip-art-small-notepad-cliparts-thumbnail.jpg'
+score.innerHTML='Score - '+points
+        }
+        if (com==2){
+            ans.innerHTML='You Lost! The computer choose Scissors'
+            points = points-1
+           
+            img.src='https://i.pinimg.com/originals/7b/1b/ec/7b1beccf6377ee380dff36bda96ff5aa.jpg'
+score.innerHTML='Score - '+points
+        }
+    }
+    function scissors(){
+        let com = Math.floor(Math.random()*3)
+        let ans = document.getElementById('1')
+        let score = document.getElementById('2')
+
+      
+        if (com==0){
+ans.innerHTML='You Lost! The computer choose rock'
+points = points-1
+score.innerHTML='Score - '+points
+img.src='https://s.pngkit.com/png/small/68-680575_stone-clipart-big-rock-rock-clipart.png'
+
+        }
+        if (com==1){
+            ans.innerHTML='You Win! The computer choose Paper'
+            points = points+1
+            img.src='https://p7.hiclipart.com/preview/65/171/713/notebook-paper-drawing-clip-art-small-notepad-cliparts-thumbnail.jpg'
+score.innerHTML='Score - '+points
+        }
+        if (com==2){
+            ans.innerHTML='It is a tie! The computer choose Scissors'
+            img.src='https://i.pinimg.com/originals/7b/1b/ec/7b1beccf6377ee380dff36bda96ff5aa.jpg'
+            
+score.innerHTML='Score - '+points
+        }
+    }
+
+
+    </script>
+</body>
+</html>
